@@ -27,4 +27,4 @@ Route::get('/register', [HomeController::class,'register'])->name('register');*/
 
 Auth::routes();
 
-Route::get('/login', [App\Http\Controllers\HomeController::class, 'index'])->name('login');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
