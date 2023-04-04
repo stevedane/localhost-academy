@@ -13,6 +13,11 @@ class SalesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('sales')->insert([
+            'date' => date('Y-m-d'),
+            'id_customer' => 1,
+            'id_car' =>1,
+            'raison'=> Str::random(50)
+        ]);
     }
 }
