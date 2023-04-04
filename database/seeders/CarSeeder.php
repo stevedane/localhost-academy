@@ -14,5 +14,11 @@ class CarSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('cars')->insert([
+            'imma'=> 'LT347JT',
+            'model'=> '4x4',
+            'cylindre'=> 12,
+            'marque'=> 'TOYOTA',
+        ]);
     }
 }
