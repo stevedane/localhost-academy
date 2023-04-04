@@ -25,8 +25,8 @@ class CreatePaymentsTable extends Migration
             $table->foreign('id_car')->references('id')->on('cars');
             $table->unsignedBigInteger('id_car');
 
-            $table->foreign('id_service')->references('id')->on('services');
             $table->unsignedBigInteger('id_service');
+            $table->string('service_type');
 
             $table->timestamps();
         });
