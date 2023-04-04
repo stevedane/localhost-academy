@@ -16,7 +16,7 @@ class CreatePaymentsTable extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->int('amount');
+            $table->double('amount');
             $table->string('method');
 
             $table->foreign('id_customer')->references('id')->on('customers');
