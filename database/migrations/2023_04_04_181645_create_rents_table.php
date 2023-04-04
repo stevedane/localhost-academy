@@ -15,6 +15,12 @@ class CreateRentsTable extends Migration
     {
         Schema::create('rents', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('start');
+            $table->dateTime('end');
+            $table->unsignedBigInteger('id_car');
+            $table->foreign('id_car')->references('id')->on('cars');
+            $table->unsignedBigInteger('id_customer');
+            $table->foreign('id_customer')->references('id')->on('customers');
             $table->timestamps();
         });
     }
